@@ -34,9 +34,13 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
+        //Setting up the view page adapter
         ViewPager viewPager = findViewById(R.id.viewpager);
         FragmentPagerAdapter adapter = new FragmentPageAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
+        /*
+        *This makes the tab view on the Top of the Main activity with fragments without the icons
+         */
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
